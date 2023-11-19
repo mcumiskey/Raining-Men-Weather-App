@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		047C046A2AF860CD00CB9EB7 /* RainingMenWeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04692AF860CD00CB9EB7 /* RainingMenWeatherAppApp.swift */; };
+		047C046C2AF860CD00CB9EB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C046B2AF860CD00CB9EB7 /* ContentView.swift */; };
+		047C046E2AF860CE00CB9EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047C046D2AF860CE00CB9EB7 /* Assets.xcassets */; };
+		047C04722AF860CE00CB9EB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047C04712AF860CE00CB9EB7 /* Preview Assets.xcassets */; };
+		047C047C2AF860CE00CB9EB7 /* RainingMenWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C047B2AF860CE00CB9EB7 /* RainingMenWeatherAppTests.swift */; };
+		047C04862AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04852AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift */; };
+		047C04882AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04872AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift */; };
+		047C04952AF94A3B00CB9EB7 /* JSONparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04942AF94A3B00CB9EB7 /* JSONparser.swift */; };
+		048A528C2AFDD9590063A9CD /* Forcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A528B2AFDD9590063A9CD /* Forcast.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		047C04782AF860CE00CB9EB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 047C045E2AF860CD00CB9EB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 047C04652AF860CD00CB9EB7;
+			remoteInfo = RainingMenWeatherApp;
+		};
+		047C04822AF860CE00CB9EB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 047C045E2AF860CD00CB9EB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 047C04652AF860CD00CB9EB7;
+			remoteInfo = RainingMenWeatherApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		047C04662AF860CD00CB9EB7 /* RainingMenWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainingMenWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		047C04692AF860CD00CB9EB7 /* RainingMenWeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainingMenWeatherAppApp.swift; sourceTree = "<group>"; };
+		047C046B2AF860CD00CB9EB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		047C046D2AF860CE00CB9EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		047C046F2AF860CE00CB9EB7 /* RainingMenWeatherApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RainingMenWeatherApp.entitlements; sourceTree = "<group>"; };
+		047C04712AF860CE00CB9EB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		047C04772AF860CE00CB9EB7 /* RainingMenWeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainingMenWeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		047C047B2AF860CE00CB9EB7 /* RainingMenWeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainingMenWeatherAppTests.swift; sourceTree = "<group>"; };
+		047C04812AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainingMenWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		047C04852AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainingMenWeatherAppUITests.swift; sourceTree = "<group>"; };
+		047C04872AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainingMenWeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		047C04942AF94A3B00CB9EB7 /* JSONparser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONparser.swift; sourceTree = "<group>"; };
+		048A528B2AFDD9590063A9CD /* Forcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forcast.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		047C04632AF860CD00CB9EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047C04742AF860CE00CB9EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047C047E2AF860CE00CB9EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		047C045D2AF860CD00CB9EB7 = {
+			isa = PBXGroup;
+			children = (
+				047C04682AF860CD00CB9EB7 /* RainingMenWeatherApp */,
+				047C047A2AF860CE00CB9EB7 /* RainingMenWeatherAppTests */,
+				047C04842AF860CE00CB9EB7 /* RainingMenWeatherAppUITests */,
+				047C04672AF860CD00CB9EB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		047C04672AF860CD00CB9EB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				047C04662AF860CD00CB9EB7 /* RainingMenWeatherApp.app */,
+				047C04772AF860CE00CB9EB7 /* RainingMenWeatherAppTests.xctest */,
+				047C04812AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		047C04682AF860CD00CB9EB7 /* RainingMenWeatherApp */ = {
+			isa = PBXGroup;
+			children = (
+				047C04942AF94A3B00CB9EB7 /* JSONparser.swift */,
+				048A528B2AFDD9590063A9CD /* Forcast.swift */,
+				047C04692AF860CD00CB9EB7 /* RainingMenWeatherAppApp.swift */,
+				047C046B2AF860CD00CB9EB7 /* ContentView.swift */,
+				047C046D2AF860CE00CB9EB7 /* Assets.xcassets */,
+				047C046F2AF860CE00CB9EB7 /* RainingMenWeatherApp.entitlements */,
+				047C04702AF860CE00CB9EB7 /* Preview Content */,
+			);
+			path = RainingMenWeatherApp;
+			sourceTree = "<group>";
+		};
+		047C04702AF860CE00CB9EB7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				047C04712AF860CE00CB9EB7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		047C047A2AF860CE00CB9EB7 /* RainingMenWeatherAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				047C047B2AF860CE00CB9EB7 /* RainingMenWeatherAppTests.swift */,
+			);
+			path = RainingMenWeatherAppTests;
+			sourceTree = "<group>";
+		};
+		047C04842AF860CE00CB9EB7 /* RainingMenWeatherAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				047C04852AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift */,
+				047C04872AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift */,
+			);
+			path = RainingMenWeatherAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		047C04652AF860CD00CB9EB7 /* RainingMenWeatherApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047C048B2AF860CE00CB9EB7 /* Build configuration list for PBXNativeTarget "RainingMenWeatherApp" */;
+			buildPhases = (
+				047C04622AF860CD00CB9EB7 /* Sources */,
+				047C04632AF860CD00CB9EB7 /* Frameworks */,
+				047C04642AF860CD00CB9EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RainingMenWeatherApp;
+			productName = RainingMenWeatherApp;
+			productReference = 047C04662AF860CD00CB9EB7 /* RainingMenWeatherApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		047C04762AF860CE00CB9EB7 /* RainingMenWeatherAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047C048E2AF860CE00CB9EB7 /* Build configuration list for PBXNativeTarget "RainingMenWeatherAppTests" */;
+			buildPhases = (
+				047C04732AF860CE00CB9EB7 /* Sources */,
+				047C04742AF860CE00CB9EB7 /* Frameworks */,
+				047C04752AF860CE00CB9EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				047C04792AF860CE00CB9EB7 /* PBXTargetDependency */,
+			);
+			name = RainingMenWeatherAppTests;
+			productName = RainingMenWeatherAppTests;
+			productReference = 047C04772AF860CE00CB9EB7 /* RainingMenWeatherAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		047C04802AF860CE00CB9EB7 /* RainingMenWeatherAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047C04912AF860CE00CB9EB7 /* Build configuration list for PBXNativeTarget "RainingMenWeatherAppUITests" */;
+			buildPhases = (
+				047C047D2AF860CE00CB9EB7 /* Sources */,
+				047C047E2AF860CE00CB9EB7 /* Frameworks */,
+				047C047F2AF860CE00CB9EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				047C04832AF860CE00CB9EB7 /* PBXTargetDependency */,
+			);
+			name = RainingMenWeatherAppUITests;
+			productName = RainingMenWeatherAppUITests;
+			productReference = 047C04812AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		047C045E2AF860CD00CB9EB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					047C04652AF860CD00CB9EB7 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					047C04762AF860CE00CB9EB7 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 047C04652AF860CD00CB9EB7;
+					};
+					047C04802AF860CE00CB9EB7 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 047C04652AF860CD00CB9EB7;
+					};
+				};
+			};
+			buildConfigurationList = 047C04612AF860CD00CB9EB7 /* Build configuration list for PBXProject "RainingMenWeatherApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 047C045D2AF860CD00CB9EB7;
+			productRefGroup = 047C04672AF860CD00CB9EB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				047C04652AF860CD00CB9EB7 /* RainingMenWeatherApp */,
+				047C04762AF860CE00CB9EB7 /* RainingMenWeatherAppTests */,
+				047C04802AF860CE00CB9EB7 /* RainingMenWeatherAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		047C04642AF860CD00CB9EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047C04722AF860CE00CB9EB7 /* Preview Assets.xcassets in Resources */,
+				047C046E2AF860CE00CB9EB7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047C04752AF860CE00CB9EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047C047F2AF860CE00CB9EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		047C04622AF860CD00CB9EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048A528C2AFDD9590063A9CD /* Forcast.swift in Sources */,
+				047C046C2AF860CD00CB9EB7 /* ContentView.swift in Sources */,
+				047C046A2AF860CD00CB9EB7 /* RainingMenWeatherAppApp.swift in Sources */,
+				047C04952AF94A3B00CB9EB7 /* JSONparser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047C04732AF860CE00CB9EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047C047C2AF860CE00CB9EB7 /* RainingMenWeatherAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047C047D2AF860CE00CB9EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047C04862AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift in Sources */,
+				047C04882AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		047C04792AF860CE00CB9EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 047C04652AF860CD00CB9EB7 /* RainingMenWeatherApp */;
+			targetProxy = 047C04782AF860CE00CB9EB7 /* PBXContainerItemProxy */;
+		};
+		047C04832AF860CE00CB9EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 047C04652AF860CD00CB9EB7 /* RainingMenWeatherApp */;
+			targetProxy = 047C04822AF860CE00CB9EB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		047C04892AF860CE00CB9EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		047C048A2AF860CE00CB9EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		047C048C2AF860CE00CB9EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RainingMenWeatherApp/RainingMenWeatherApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RainingMenWeatherApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcumiskey.RainingMenWeatherApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		047C048D2AF860CE00CB9EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RainingMenWeatherApp/RainingMenWeatherApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RainingMenWeatherApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcumiskey.RainingMenWeatherApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		047C048F2AF860CE00CB9EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcumiskey.RainingMenWeatherAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RainingMenWeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RainingMenWeatherApp";
+			};
+			name = Debug;
+		};
+		047C04902AF860CE00CB9EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcumiskey.RainingMenWeatherAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RainingMenWeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RainingMenWeatherApp";
+			};
+			name = Release;
+		};
+		047C04922AF860CE00CB9EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcumiskey.RainingMenWeatherAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RainingMenWeatherApp;
+			};
+			name = Debug;
+		};
+		047C04932AF860CE00CB9EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mcumiskey.RainingMenWeatherAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RainingMenWeatherApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		047C04612AF860CD00CB9EB7 /* Build configuration list for PBXProject "RainingMenWeatherApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047C04892AF860CE00CB9EB7 /* Debug */,
+				047C048A2AF860CE00CB9EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		047C048B2AF860CE00CB9EB7 /* Build configuration list for PBXNativeTarget "RainingMenWeatherApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047C048C2AF860CE00CB9EB7 /* Debug */,
+				047C048D2AF860CE00CB9EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		047C048E2AF860CE00CB9EB7 /* Build configuration list for PBXNativeTarget "RainingMenWeatherAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047C048F2AF860CE00CB9EB7 /* Debug */,
+				047C04902AF860CE00CB9EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		047C04912AF860CE00CB9EB7 /* Build configuration list for PBXNativeTarget "RainingMenWeatherAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047C04922AF860CE00CB9EB7 /* Debug */,
+				047C04932AF860CE00CB9EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 047C045E2AF860CD00CB9EB7 /* Project object */;
+}
