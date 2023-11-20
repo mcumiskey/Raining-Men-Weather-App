@@ -46,9 +46,11 @@ struct ContentView: View {
         .padding(.bottom)
         .task {
             do {
-                
-                //city = try await getForcast()
-                forecast = fetchWeatherData()
+                print(" - - - - - - - - - - -")
+                fetchWeatherData()
+                forecast = try await getWeatherData()
+            } catch let error {
+                 print("Failed to get data: \(error.localizedDescription)")
             }
         }
     }
