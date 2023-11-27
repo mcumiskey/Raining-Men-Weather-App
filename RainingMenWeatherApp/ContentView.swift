@@ -11,84 +11,55 @@ struct ContentView: View {
     @State private var current_time: Double = 3.23
     @State private var current_temp: Double = 3.23
     
+    private var default_temp = 45.0
+    private var default_weather = "Clear Skys"
+
     @State private var forecast: Forecast?
     
     var body: some View {
-        
-        VStack {
-
-            HeaderView(city: "London")
-                
-            BasicWeatherView(temp: 45.0, icon: "moon")
+        if let forecast = forecast {
             VStack {
-                Slider(value: $current_time, in: 0...24, step: 1)
-                                .padding(.horizontal, 10)
-                HStack {
-                    VStack {
-                        Text("Sunrise")
-                        Text("6.01 AM")
-                    }
-
-                    VStack {
-                        Text("Sunset")
-                        Text("8.41 PM")
+                HeaderView(city: forecast.city.name)
+                
+                let temperature = String(forecast.list[0].main.temp)
+                Text("\(temperature)")
+                    .padding(.bottom)
+                
+                VStack {
+                    Slider(value: $current_time, in: 0...24, step: 1)
+                        .padding(.horizontal, 10)
+                    HStack {
+                        VStack {
+                            Text("Sunrise")
+                            Text("6:02 am")
+                        }
+                        
+                        VStack {
+                            Text("Sunset")
+                            Text("8.41 PM")
+                        }
                     }
                 }
-
-            }
                 .padding(10)
                 .padding(.bottom)
-            Text("View Weekly Forcast")
-                .padding(.bottom)
-            Image(systemName: "chevron.down")
-              
-        }
-        .padding(.bottom)
-        .task {
-            do {
-                print(" - - - - - - - - - - -")
-                fetchWeatherData()
-                forecast = try await getWeatherData()
-            } catch let error {
-                 print("Failed to get data: \(error.localizedDescription)")
+                Text("View Weekly Forcast")
+                    .padding(.bottom)
+                Image(systemName: "chevron.down")
+                
+            }
+            .padding(.bottom)
+            .task {
+                do {
+                    print(" - - - - - - - - - - -")
+                    //fetchWeatherData()
+                    self.forecast = try await getWeatherData()
+                } catch let error {
+                    print("Failed to get data: \(error.localizedDescription)")
+                }
             }
         }
     }
 }
-
-struct HeaderView: View {
-    var city: String
-    
-    var body: some View {
-        HStack {
-            Image(systemName: "line.3.horizontal")
-                .padding()
-            Text("\(city)")
-                .padding()
-            Image(systemName: "calendar")
-                .padding()
-        }
-    }
-}
-
-struct BasicWeatherView: View {
-    var temp: Double
-    var icon: String
-    
-    var body: some View {
-        Image(systemName: "moon.fill")
-            .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0), resizingMode: .stretch)
-            .aspectRatio(contentMode: .fit)
-            .foregroundColor(Color.accentColor)
-            .padding([.top, .leading, .trailing], 50.0)
-            .padding([.bottom], 10.0)
-        Text("\(temp)")
-            .font(.largeTitle)
-            .padding()
-    }
-}
-
-    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

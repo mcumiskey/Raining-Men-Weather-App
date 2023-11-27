@@ -10,7 +10,7 @@ import Foundation
 
 func fetchWeatherData()  {
     // Create the URL object
-    if let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=39.952583&lon=75.16522&appid=2313e467c5790189a3e5a639d489a20b&units=imperial") {
+    if let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?zip=07840,us&appid=2313e467c5790189a3e5a639d489a20b&units=imperial") {
         // Create the URLSession
         let session = URLSession.shared
         
@@ -30,14 +30,16 @@ func fetchWeatherData()  {
             do {
                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                     if let attribute1 = json["cnt"] as? Int {
-                        print("\(attribute1)")
+                        print("\(json)")
                     }
                     let decoder = JSONDecoder()
                     //decoding the date format
                     decoder.dateDecodingStrategy = .iso8601
                     let decodedresults = try decoder.decode(Forecast.self, from: data)
-                    print(decodedresults)
-                    print("HELLO")
+                    print("fetchWeatherData")
+                    print(decodedresults.list[0].main.temp)
+                    print(decodedresults.list[0].weather[0].description)
+                    //print("HELLO")
                 } else {
                     print("Invalid JSON format")
                 }
@@ -54,7 +56,7 @@ func fetchWeatherData()  {
 
 func getWeatherData() async throws -> Forecast? {
     // Create the URL object
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=39.952583&lon=75.16522&appid=2313e467c5790189a3e5a639d489a20b&units=imperial")  else {
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?zip=07840,us&appid=2313e467c5790189a3e5a639d489a20b&units=imperial")  else {
             throw URLError(.badURL)
     }
     // Create the URLSession
@@ -64,6 +66,13 @@ func getWeatherData() async throws -> Forecast? {
     let (data, _) = try await URLSession.shared.data(from: url)
     //custom error handling here
     let decoder = JSONDecoder()
+    
+    decoder.dateDecodingStrategy = .iso8601
+    let decodedresults = try decoder.decode(Forecast.self, from: data)
+    print("getWeatherData")
+    print(decodedresults.list[0].main.temp)
+    print(decodedresults.list[0].weather[0].description)
+    
     return try decoder.decode(Forecast.self, from: data)
 }
 

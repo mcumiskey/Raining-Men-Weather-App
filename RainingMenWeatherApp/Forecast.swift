@@ -16,12 +16,12 @@ struct Forecast: Codable {
 struct Daily: Codable {
     /* the date of the weather forecasted, unix, UTC */
     let dt: Double
+    
     let main: Main
-    let weather: Weather
+    let weather: [Weather]
     
     /*percentage of precipitation*/
-    let pop: Int
-    
+    //let pop: Int
 }
 
 struct Main: Codable {
