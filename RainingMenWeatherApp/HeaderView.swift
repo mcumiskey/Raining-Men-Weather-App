@@ -14,9 +14,11 @@ struct HeaderView: View {
         HStack {
             Image(systemName: "line.3.horizontal")
                 .padding()
+            Spacer()
             Text("\(city)")
                 .padding()
-            Image(systemName: "calendar")
+            Spacer()
+            Image(systemName: "star")
                 .padding()
         }
     }

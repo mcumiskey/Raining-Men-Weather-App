@@ -10,33 +10,60 @@ import SwiftUI
 struct SunPositionView: View {
     var sunrise: Double
     var sunset: Double
-    var currentTime: Double
+    var currentTime: String {
+        Date().formatted(date: .omitted, time: .shortened)
+     }
         
     let width = 300.0
     
     var body: some View {
+        let percent = getHour(curTime: currentTime) / getHour(curTime: getTimeFromUNIXtime(time: sunset))
+        
         VStack {
         
-            
-//            GayCircle(width: width)
-//            SunArch()
-//                .padding(45)
-            SunCurve(percent: 0.13)
-                .frame(height: 100)
+            SunCurve(percent: percent, label: currentTime)
+                .frame(height: 90)
             
             HStack {
                 VStack {
-                    Text("Sunrise")
-                    Text(getTimeFromUNIXtime(time: sunrise))
-                }
-                
+                    Text("Sunrise\n"+getTimeFromUNIXtime(time: sunrise))
+                }.padding(20)
+                Spacer()
                 VStack {
-                    Text("Sunset")
-                    Text(getTimeFromUNIXtime(time: sunset))
-                }
+                    Text("Sunset\n"+getTimeFromUNIXtime(time: sunset))
+                        .multilineTextAlignment(.trailing)
+                }.padding(20)
             }
         }
     }
+}
+
+func getHour(curTime: String) -> Double {
+    let truncate = curTime.firstIndex(of: ":")!
+    let postTime = curTime.index(before: truncate)
+    
+    let hour = curTime[...postTime]
+    print("hour")
+    print(hour)
+    
+    let int = NumberFormatter().number(from: String(hour))?.doubleValue
+    
+    if(curTime.contains("AM")) {
+        if(int == 12) {
+            return 0
+        } else {
+            return int ?? 12
+        }
+    }
+    if(curTime.contains("PM")) {
+        if(int == 12) {
+            return 12
+        } else {
+            return ((int ?? 1)+12)
+        }
+    }
+    
+    return int ?? 12
 }
 
 infix operator *: MultiplicationPrecedence
@@ -81,45 +108,30 @@ struct SunCurveShape: Shape {
 
 struct SunCurve: View {
     var percent: Double
+    var label: String
     
     var body: some View {
         GeometryReader { proxy in
             let rect = proxy.frame(in: .local)
             let p0 = CGPoint(x: rect.minX, y: rect.maxY)
-            let p1 = CGPoint(x: rect.minX, y: rect.minY)
-            let p2 = CGPoint(x: rect.maxX, y: rect.minY)
+            let p1 = CGPoint(x: rect.minX+105, y: rect.minY)
+            let p2 = CGPoint(x: rect.maxX-105, y: rect.minY)
             let p3 = CGPoint(x: rect.maxX, y: rect.maxY)
             let bezier = Bezier(p0: p0, p1: p1, p2: p2, p3: p3)
             SunCurveShape(bezier: bezier)
-                .stroke(style: .init(lineWidth: 3))
-                .fill(Color.accentColor)
+                .stroke(style: .init(lineWidth: 2))
+                .fill(Color("Orange"))
                 .navigationTitle(Text("Square View"))
             Circle()
-                .fill(Color.black)
-                .frame(width: 26, height: 32)
+                .fill(Color("Orange"))
+                .frame(width: 21, height: 32)
                 .position(bezier.position(t: percent))
-                .onAppear {
-                    print(p0, p1, p2, p3)
-                    print(bezier.position(t: 0.0), bezier.position(t: 0.5), bezier.position(t: 1.0))
-                }
-            Text("label")
-                .position(bezier.position(t: percent) + CGPoint(x: 0, y: -30))
-        }
-    }
-}
-
-
-struct GayCircle: View {
-    var width: Double
-    
-    var body: some View {
-        ZStack {
-            Circle()
-                .fill(RadialGradient(colors: [.purple, .blue, .green, .yellow, .red], center: .center, startRadius: (width / 5), endRadius: width/2))
-                .frame(width: width)
-            Circle()
-                .fill(.background)
-                .frame(width: width-60)
+//                .onAppear {
+//                    print(p0, p1, p2, p3)
+//                    print(bezier.position(t: 0.0), bezier.position(t: 0.5), bezier.position(t: 1.0))
+//                }
+//            Text(label)
+//                .position(bezier.position(t: percent) + CGPoint(x: 0, y: -30))
         }
     }
 }
@@ -140,6 +152,6 @@ var gradient: LinearGradient {
 
 struct SunPositionView_Previews: PreviewProvider {
     static var previews: some View {
-        SunPositionView(sunrise: 1700913474, sunset: 1700948101, currentTime: 12.30)
+        SunPositionView(sunrise: 1700913474, sunset: 1700948101)
     }
 }
