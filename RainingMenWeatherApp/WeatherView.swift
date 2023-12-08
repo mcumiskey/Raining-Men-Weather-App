@@ -23,25 +23,31 @@ struct WeatherView: View {
         
         VStack {
             mainWeatherPNG(iconType: iconType)
-                .frame(width: 300.0)
-            Text(weatherDescription)
-                .font(.subheadline)
-                .padding()
+            
             HStack {
                 Spacer()
+                
                 Text(minTemp + "°")
                     .font(.subheadline)
-                    .padding()
+                
                 Spacer()
+                
                 Text(avTemp + "°")
                     .font(.largeTitle)
-                    .padding()
+                    .multilineTextAlignment(.center)
+                
                 Spacer()
+                
                 Text( maxTemp + "°")
                     .font(.subheadline)
-                    .padding()
+                
                 Spacer()
             }
+            
+            Text(weatherDescription)
+                .font(.title)
+                .multilineTextAlignment(.center)
+                .padding(.top, 0.5)
         }
     }
 }
@@ -68,7 +74,7 @@ struct mainWeatherPNG: View {
                 .scaledToFit()
             //Snow
         case 600..<700:
-            Image("Storm")
+            Image("Snow")
                 .resizable()
                 .scaledToFit()
             //Atmosphere
@@ -83,7 +89,7 @@ struct mainWeatherPNG: View {
                 .scaledToFit()
             //Cloud
         case 801..<900:
-            Image("Cloud")
+            Image("Snow")
                 .resizable()
                 .scaledToFit()
         default:
@@ -96,6 +102,6 @@ struct mainWeatherPNG: View {
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherView(avTemp: "42", minTemp: "40", maxTemp: "45", weatherDescription: "Overcast", iconType: 700)
+        WeatherView(avTemp: "42", minTemp: "40", maxTemp: "45", weatherDescription: "Sunny", iconType: 800)
     }
 }

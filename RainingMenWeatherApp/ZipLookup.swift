@@ -9,7 +9,21 @@ import SwiftUI
 
 struct ZipLookup: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                NavigationLink(destination: ContentView()) {
+                    Text("Philidelphia")
+                    
+                }.padding()
+                NavigationLink(destination: ContentView()) {
+                    Text("New York")
+                }.padding()
+                NavigationLink(destination: ContentView()) {
+                    Text("Agoura Hills")
+                }.padding()
+                //91301
+            }.navigationBarTitle("Favorite Locations")
+        }
     }
 }
 

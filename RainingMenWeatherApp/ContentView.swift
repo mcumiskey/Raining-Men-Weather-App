@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var current_time: Double = 3.23
     @State private var current_temp: Double = 3.23
     
@@ -31,12 +32,9 @@ struct ContentView: View {
                 let sunset = forecast?.city.sunset ?? 11.1
                 
                 HeaderView(city: city)
-                Spacer()
             
                WeatherView(avTemp: temperature, minTemp: minTemp, maxTemp: maxTemp, weatherDescription: weatherDescription, iconType: icon)
                 
-                Text(weatherDescription)
-                    .padding(.bottom)
                 Spacer()
                 SunPositionView(sunrise: sunrise, sunset: sunset)
                 Text("View Weekly Forcast")
@@ -46,11 +44,10 @@ struct ContentView: View {
                 
             }
             .background(Color("BG"))
-            .padding(.bottom)
             .task {
                 do {
                     print(" - - - - - - - - - - -")
-                    self.forecast = try await getWeatherData()
+                    self.forecast = try await getWeatherData(zip: 19107)
                 } catch let error {
                     print("Failed to get data: \(error.localizedDescription)")
                 }

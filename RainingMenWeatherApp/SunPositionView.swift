@@ -17,7 +17,7 @@ struct SunPositionView: View {
     let width = 300.0
     
     var body: some View {
-        let percent = getHour(curTime: currentTime) / getHour(curTime: getTimeFromUNIXtime(time: sunset))
+        let percent = (getHour(curTime: currentTime) - getHour(curTime: getTimeFromUNIXtime(time: sunrise))) / (getHour(curTime: getTimeFromUNIXtime(time: sunrise)) + getHour(curTime: getTimeFromUNIXtime(time: sunset)))
         
         VStack {
         
