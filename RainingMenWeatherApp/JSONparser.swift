@@ -56,7 +56,7 @@ func fetchWeatherData()  {
 
 func getWeatherData() async throws -> Forecast? {
     // Create the URL object
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?zip=07840,us&appid=2313e467c5790189a3e5a639d489a20b&units=imperial")  else {
+    guard let url = URL(string: "URL")  else {
             throw URLError(.badURL)
     }
     // Create the URLSession
@@ -79,7 +79,7 @@ func getWeatherData() async throws -> Forecast? {
 func getWeatherData(zip: Int) async throws -> Forecast? {
     
     // Create the URL object
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?zip=\(zip),us&appid=2313e467c5790189a3e5a639d489a20b&units=imperial")  else {
+    guard let url = URL(string: "URL")  else {
             throw URLError(.badURL)
     }
     // Create the URLSession
