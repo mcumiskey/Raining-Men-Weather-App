@@ -16,6 +16,11 @@
 		047C04882AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04872AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift */; };
 		047C04952AF94A3B00CB9EB7 /* JSONparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04942AF94A3B00CB9EB7 /* JSONparser.swift */; };
 		048A528C2AFDD9590063A9CD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A528B2AFDD9590063A9CD /* Forecast.swift */; };
+		049412252B252F41003E96D0 /* DarumadropOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049412242B252F40003E96D0 /* DarumadropOne-Regular.ttf */; };
+		049412282B25302A003E96D0 /* Quattrocento-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049412272B25302A003E96D0 /* Quattrocento-Bold.ttf */; };
+		0494122B2B2530EF003E96D0 /* ScopeOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0494122A2B2530EE003E96D0 /* ScopeOne-Regular.ttf */; };
+		0494122F2B2531FA003E96D0 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494122E2B2531FA003E96D0 /* fonts.swift */; };
+		049412312B2532D1003E96D0 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049412302B2532D1003E96D0 /* APIKey.swift */; };
 		04B8397E2B124CE500B704FB /* AverageForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8397D2B124CE500B704FB /* AverageForecast.swift */; };
 		04B839802B125CB100B704FB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8397F2B125CB100B704FB /* HeaderView.swift */; };
 		04B839822B125D0200B704FB /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B839812B125D0200B704FB /* WeatherView.swift */; };
@@ -55,6 +60,13 @@
 		047C04872AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainingMenWeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		047C04942AF94A3B00CB9EB7 /* JSONparser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONparser.swift; sourceTree = "<group>"; };
 		048A528B2AFDD9590063A9CD /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		049412242B252F40003E96D0 /* DarumadropOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DarumadropOne-Regular.ttf"; sourceTree = "<group>"; };
+		049412272B25302A003E96D0 /* Quattrocento-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quattrocento-Bold.ttf"; sourceTree = "<group>"; };
+		049412292B25309A003E96D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0494122A2B2530EE003E96D0 /* ScopeOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScopeOne-Regular.ttf"; sourceTree = "<group>"; };
+		0494122D2B253179003E96D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0494122E2B2531FA003E96D0 /* fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fonts.swift; sourceTree = "<group>"; };
+		049412302B2532D1003E96D0 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		04B8397D2B124CE500B704FB /* AverageForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageForecast.swift; sourceTree = "<group>"; };
 		04B8397F2B125CB100B704FB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		04B839812B125D0200B704FB /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
@@ -111,19 +123,14 @@
 		047C04682AF860CD00CB9EB7 /* RainingMenWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				047C04942AF94A3B00CB9EB7 /* JSONparser.swift */,
-				048A528B2AFDD9590063A9CD /* Forecast.swift */,
+				0494122D2B253179003E96D0 /* Info.plist */,
+				0494122C2B253118003E96D0 /* Fonts */,
+				049412262B252F5A003E96D0 /* Utility */,
 				047C04692AF860CD00CB9EB7 /* RainingMenWeatherAppApp.swift */,
-				04B839872B1D2CCB00B704FB /* ZipLookup.swift */,
 				047C046B2AF860CD00CB9EB7 /* ContentView.swift */,
 				047C046D2AF860CE00CB9EB7 /* Assets.xcassets */,
 				047C046F2AF860CE00CB9EB7 /* RainingMenWeatherApp.entitlements */,
 				047C04702AF860CE00CB9EB7 /* Preview Content */,
-				04B8397D2B124CE500B704FB /* AverageForecast.swift */,
-				04B839812B125D0200B704FB /* WeatherView.swift */,
-				04B8397F2B125CB100B704FB /* HeaderView.swift */,
-				04B839832B125D7E00B704FB /* SunPositionView.swift */,
-				04EF711B2B1EE5A5005C8994 /* Background.swift */,
 			);
 			path = RainingMenWeatherApp;
 			sourceTree = "<group>";
@@ -147,10 +154,38 @@
 		047C04842AF860CE00CB9EB7 /* RainingMenWeatherAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				049412292B25309A003E96D0 /* Info.plist */,
 				047C04852AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift */,
 				047C04872AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift */,
 			);
 			path = RainingMenWeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		049412262B252F5A003E96D0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				04B839872B1D2CCB00B704FB /* ZipLookup.swift */,
+				048A528B2AFDD9590063A9CD /* Forecast.swift */,
+				04B8397D2B124CE500B704FB /* AverageForecast.swift */,
+				04B839812B125D0200B704FB /* WeatherView.swift */,
+				04EF711B2B1EE5A5005C8994 /* Background.swift */,
+				04B8397F2B125CB100B704FB /* HeaderView.swift */,
+				04B839832B125D7E00B704FB /* SunPositionView.swift */,
+				047C04942AF94A3B00CB9EB7 /* JSONparser.swift */,
+				0494122E2B2531FA003E96D0 /* fonts.swift */,
+				049412302B2532D1003E96D0 /* APIKey.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		0494122C2B253118003E96D0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				049412242B252F40003E96D0 /* DarumadropOne-Regular.ttf */,
+				049412272B25302A003E96D0 /* Quattrocento-Bold.ttf */,
+				0494122A2B2530EE003E96D0 /* ScopeOne-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +292,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0494122B2B2530EF003E96D0 /* ScopeOne-Regular.ttf in Resources */,
+				049412282B25302A003E96D0 /* Quattrocento-Bold.ttf in Resources */,
+				049412252B252F41003E96D0 /* DarumadropOne-Regular.ttf in Resources */,
 				047C04722AF860CE00CB9EB7 /* Preview Assets.xcassets in Resources */,
 				047C046E2AF860CE00CB9EB7 /* Assets.xcassets in Resources */,
 			);
@@ -291,7 +329,9 @@
 				04B839822B125D0200B704FB /* WeatherView.swift in Sources */,
 				04B839842B125D7E00B704FB /* SunPositionView.swift in Sources */,
 				047C04952AF94A3B00CB9EB7 /* JSONparser.swift in Sources */,
+				0494122F2B2531FA003E96D0 /* fonts.swift in Sources */,
 				04B839882B1D2CCB00B704FB /* ZipLookup.swift in Sources */,
+				049412312B2532D1003E96D0 /* APIKey.swift in Sources */,
 				04EF711C2B1EE5A5005C8994 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +489,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RainingMenWeatherApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RainingMenWeatherApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -459,7 +500,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -486,6 +526,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RainingMenWeatherApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RainingMenWeatherApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -496,7 +537,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -563,6 +603,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RainingMenWeatherAppUITests/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
@@ -584,6 +626,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RainingMenWeatherAppUITests/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;

@@ -28,24 +28,24 @@ struct WeatherView: View {
                 Spacer()
                 
                 Text(minTemp + "°")
-                    .font(.subheadline)
+                    .font(.custom("DarumadropOne-Regular", size: 16))
                 
                 Spacer()
                 
                 Text(avTemp + "°")
-                    .font(.largeTitle)
+                    .font(.custom("DarumadropOne-Regular", size: 32))
                     .multilineTextAlignment(.center)
                 
                 Spacer()
                 
                 Text( maxTemp + "°")
-                    .font(.subheadline)
+                    .font(.custom("DarumadropOne-Regular", size: 16))
                 
                 Spacer()
             }
             
             Text(weatherDescription)
-                .font(.title)
+                .font(.custom("DarumadropOne-Regular", size: 32))
                 .multilineTextAlignment(.center)
                 .padding(.top, 0.5)
         }
