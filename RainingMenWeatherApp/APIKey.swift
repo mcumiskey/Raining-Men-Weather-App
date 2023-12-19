@@ -8,4 +8,6 @@
 import Foundation
 
 //api key stored here, not on github ;) 
-
+func getAPIkey() -> String {
+    return "testing github"
+}
