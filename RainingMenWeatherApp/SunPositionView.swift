@@ -17,12 +17,11 @@ struct SunPositionView: View {
     let width = 300.0
     
     var body: some View {
-        let percent = (getHour(curTime: currentTime) - getHour(curTime: getTimeFromUNIXtime(time: sunrise))) / (getHour(curTime: getTimeFromUNIXtime(time: sunrise)) + getHour(curTime: getTimeFromUNIXtime(time: sunset)))
+        let timeofsun = getSunPosPercent(sunrise: sunrise, sunset: sunset, curTime: currentTime)
         
         VStack {
-        
-            SunCurve(percent: percent, label: currentTime)
-                .frame(height: 90)
+            SunCurve(percent: timeofsun, label: currentTime)
+                .frame(height: 60)
             
             HStack {
                 VStack {
@@ -38,24 +37,25 @@ struct SunPositionView: View {
     }
 }
 
-func getHour(curTime: String) -> Double {
-    let truncate = curTime.firstIndex(of: ":")!
-    let postTime = curTime.index(before: truncate)
+func getHour24hrFormat(originalTime: Double) -> Double {
+    let hourTime = getTimeFromUNIXtime(time: originalTime)
+    let truncate = hourTime.firstIndex(of: ":")!
+    let postTime = hourTime.index(before: truncate)
     
-    let hour = curTime[...postTime]
+    let hour = hourTime[...postTime]
     print("hour")
     print(hour)
     
     let int = NumberFormatter().number(from: String(hour))?.doubleValue
     
-    if(curTime.contains("AM")) {
+    if(hourTime.contains("AM")) {
         if(int == 12) {
             return 0
         } else {
             return int ?? 12
         }
     }
-    if(curTime.contains("PM")) {
+    if(hourTime.contains("PM")) {
         if(int == 12) {
             return 12
         } else {
@@ -64,6 +64,30 @@ func getHour(curTime: String) -> Double {
     }
     
     return int ?? 12
+}
+
+func getSunPosPercent(sunrise: Double, sunset: Double, curTime: String) -> Double {
+    //get just the hour of the sunrise / sunset to compare
+    let sunriseHour = getHour24hrFormat(originalTime: sunrise)
+    let sunsetHour = getHour24hrFormat(originalTime: sunset)
+    let now = getHour24hrFormat(originalTime: Double(curTime) ?? 1)
+    
+    //if we are pre-sunrise, put the sun in the left corner
+    if (now < sunriseHour) {
+        return 0
+    }
+    //if we are post-sunset, put the sun in the right corner
+    if (now > sunsetHour) {
+        return 1
+    }
+    
+    
+    //get the absolute value of the sunset - sunrise
+    let absolute = abs(sunsetHour - sunriseHour)
+    
+    //Percentage difference formula
+    //"technically" should be *100 but I want decimal format
+    return (absolute / ((sunsetHour + sunriseHour) / 2 ))
 }
 
 infix operator *: MultiplicationPrecedence
@@ -126,23 +150,21 @@ struct SunCurve: View {
                 .fill(Color("Orange"))
                 .frame(width: 21, height: 32)
                 .position(bezier.position(t: percent))
-//                .onAppear {
-//                    print(p0, p1, p2, p3)
-//                    print(bezier.position(t: 0.0), bezier.position(t: 0.5), bezier.position(t: 1.0))
-//                }
-//            Text(label)
-//                .position(bezier.position(t: percent) + CGPoint(x: 0, y: -30))
+                .onAppear {
+                    print(p0, p1, p2, p3)
+                    print(bezier.position(t: 0.0), bezier.position(t: 0.5), bezier.position(t: 1.0))
+                }
         }
     }
 }
 
 func getTimeFromUNIXtime(time: Double) -> String {
     let formatter = DateFormatter()
-    let sunriseTime = NSDate(timeIntervalSince1970: time)
+    let formattedTime = NSDate(timeIntervalSince1970: time)
     formatter.dateStyle = .none
     formatter.timeStyle = .short
     
-    return formatter.string(from: sunriseTime as Date)
+    return formatter.string(from: formattedTime as Date)
 }
 
 

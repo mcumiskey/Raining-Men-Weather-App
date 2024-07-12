@@ -11,14 +11,15 @@ struct HeaderView: View {
     var city: String
     
     var body: some View {
-        HStack {
-            Image(systemName: "line.3.horizontal")
-                .padding()
-            Spacer()
+        VStack {
+            HStack {
+                Image(systemName: "line.3.horizontal")
+                    .padding()
+                Spacer()
+                Image(systemName: "star")
+                    .padding()
+            }
             Text("\(city)")
-                .padding()
-            Spacer()
-            Image(systemName: "star")
                 .padding()
         }
     }
