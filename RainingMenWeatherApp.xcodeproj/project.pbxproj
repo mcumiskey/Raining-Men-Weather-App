@@ -14,18 +14,19 @@
 		047C047C2AF860CE00CB9EB7 /* RainingMenWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C047B2AF860CE00CB9EB7 /* RainingMenWeatherAppTests.swift */; };
 		047C04862AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04852AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift */; };
 		047C04882AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04872AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift */; };
-		047C04952AF94A3B00CB9EB7 /* JSONparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C04942AF94A3B00CB9EB7 /* JSONparser.swift */; };
 		048A528C2AFDD9590063A9CD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A528B2AFDD9590063A9CD /* Forecast.swift */; };
 		049412252B252F41003E96D0 /* DarumadropOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049412242B252F40003E96D0 /* DarumadropOne-Regular.ttf */; };
 		049412282B25302A003E96D0 /* Quattrocento-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 049412272B25302A003E96D0 /* Quattrocento-Bold.ttf */; };
 		0494122B2B2530EF003E96D0 /* ScopeOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0494122A2B2530EE003E96D0 /* ScopeOne-Regular.ttf */; };
-		0494122F2B2531FA003E96D0 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494122E2B2531FA003E96D0 /* fonts.swift */; };
 		049412312B2532D1003E96D0 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049412302B2532D1003E96D0 /* APIKey.swift */; };
 		04B8397E2B124CE500B704FB /* AverageForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8397D2B124CE500B704FB /* AverageForecast.swift */; };
 		04B839802B125CB100B704FB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8397F2B125CB100B704FB /* HeaderView.swift */; };
 		04B839822B125D0200B704FB /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B839812B125D0200B704FB /* WeatherView.swift */; };
 		04B839842B125D7E00B704FB /* SunPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B839832B125D7E00B704FB /* SunPositionView.swift */; };
 		04B839882B1D2CCB00B704FB /* ZipLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B839872B1D2CCB00B704FB /* ZipLookup.swift */; };
+		04BB81212C41B23E00741EA8 /* GetForcastFromAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB81202C41B23E00741EA8 /* GetForcastFromAPI.swift */; };
+		04BB81232C46EC0600741EA8 /* TimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB81222C46EC0600741EA8 /* TimeFunctions.swift */; };
+		04BB81252C46F05200741EA8 /* TimeTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB81242C46F05200741EA8 /* TimeTesting.swift */; };
 		04EF711C2B1EE5A5005C8994 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF711B2B1EE5A5005C8994 /* Background.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,20 +59,21 @@
 		047C04812AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainingMenWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		047C04852AF860CE00CB9EB7 /* RainingMenWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainingMenWeatherAppUITests.swift; sourceTree = "<group>"; };
 		047C04872AF860CE00CB9EB7 /* RainingMenWeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainingMenWeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		047C04942AF94A3B00CB9EB7 /* JSONparser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONparser.swift; sourceTree = "<group>"; };
 		048A528B2AFDD9590063A9CD /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		049412242B252F40003E96D0 /* DarumadropOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DarumadropOne-Regular.ttf"; sourceTree = "<group>"; };
 		049412272B25302A003E96D0 /* Quattrocento-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quattrocento-Bold.ttf"; sourceTree = "<group>"; };
 		049412292B25309A003E96D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0494122A2B2530EE003E96D0 /* ScopeOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScopeOne-Regular.ttf"; sourceTree = "<group>"; };
 		0494122D2B253179003E96D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		0494122E2B2531FA003E96D0 /* fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fonts.swift; sourceTree = "<group>"; };
 		049412302B2532D1003E96D0 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		04B8397D2B124CE500B704FB /* AverageForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageForecast.swift; sourceTree = "<group>"; };
 		04B8397F2B125CB100B704FB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		04B839812B125D0200B704FB /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		04B839832B125D7E00B704FB /* SunPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunPositionView.swift; sourceTree = "<group>"; };
 		04B839872B1D2CCB00B704FB /* ZipLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipLookup.swift; sourceTree = "<group>"; };
+		04BB81202C41B23E00741EA8 /* GetForcastFromAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForcastFromAPI.swift; sourceTree = "<group>"; };
+		04BB81222C46EC0600741EA8 /* TimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFunctions.swift; sourceTree = "<group>"; };
+		04BB81242C46F05200741EA8 /* TimeTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTesting.swift; sourceTree = "<group>"; };
 		04EF711B2B1EE5A5005C8994 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,15 +167,16 @@
 			isa = PBXGroup;
 			children = (
 				04B839872B1D2CCB00B704FB /* ZipLookup.swift */,
+				04BB81202C41B23E00741EA8 /* GetForcastFromAPI.swift */,
 				048A528B2AFDD9590063A9CD /* Forecast.swift */,
 				04B8397D2B124CE500B704FB /* AverageForecast.swift */,
 				04B839812B125D0200B704FB /* WeatherView.swift */,
 				04EF711B2B1EE5A5005C8994 /* Background.swift */,
 				04B8397F2B125CB100B704FB /* HeaderView.swift */,
 				04B839832B125D7E00B704FB /* SunPositionView.swift */,
-				047C04942AF94A3B00CB9EB7 /* JSONparser.swift */,
-				0494122E2B2531FA003E96D0 /* fonts.swift */,
 				049412302B2532D1003E96D0 /* APIKey.swift */,
+				04BB81222C46EC0600741EA8 /* TimeFunctions.swift */,
+				04BB81242C46F05200741EA8 /* TimeTesting.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -322,14 +325,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				048A528C2AFDD9590063A9CD /* Forecast.swift in Sources */,
+				04BB81252C46F05200741EA8 /* TimeTesting.swift in Sources */,
 				04B839802B125CB100B704FB /* HeaderView.swift in Sources */,
+				04BB81232C46EC0600741EA8 /* TimeFunctions.swift in Sources */,
 				047C046C2AF860CD00CB9EB7 /* ContentView.swift in Sources */,
 				04B8397E2B124CE500B704FB /* AverageForecast.swift in Sources */,
 				047C046A2AF860CD00CB9EB7 /* RainingMenWeatherAppApp.swift in Sources */,
+				04BB81212C41B23E00741EA8 /* GetForcastFromAPI.swift in Sources */,
 				04B839822B125D0200B704FB /* WeatherView.swift in Sources */,
 				04B839842B125D7E00B704FB /* SunPositionView.swift in Sources */,
-				047C04952AF94A3B00CB9EB7 /* JSONparser.swift in Sources */,
-				0494122F2B2531FA003E96D0 /* fonts.swift in Sources */,
 				04B839882B1D2CCB00B704FB /* ZipLookup.swift in Sources */,
 				049412312B2532D1003E96D0 /* APIKey.swift in Sources */,
 				04EF711C2B1EE5A5005C8994 /* Background.swift in Sources */,

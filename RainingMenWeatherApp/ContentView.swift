@@ -20,15 +20,14 @@ struct ContentView: View {
     var body: some View {
             VStack {
                 //defaults
-                let city = forecast?.city.name ?? "Philadelphia"
-                let temperature = String(forecast?.list[0].main.temp ?? 45.5)
-                let feelsLike = String(forecast?.list[0].main.feels_like ?? 45.0)
-                let minTemp = String(forecast?.list[0].main.temp_min ?? 40.0)
-                let maxTemp = String(forecast?.list[0].main.temp_max ?? 50.0)
-                let weatherDescription = String(forecast?.list[0].weather[0].description ?? "Clear Skys")
+                let city = forecast?.city.name ?? "London"
+                let temperature = String(forecast?.list[0].main.temp ?? 34.5)
+                let minTemp = String(forecast?.list[0].main.temp_min ?? 30.0)
+                let maxTemp = String(forecast?.list[0].main.temp_max ?? 40.0)
+                let weatherDescription = String(forecast?.list[0].weather[0].description ?? "Cloudy")
                 let icon = forecast?.list[0].weather[0].id ?? 800
 
-                let sunrise = forecast?.city.sunrise ?? 10.1
+                let sunrise = forecast?.city.sunrise ?? 8.1
                 let sunset = forecast?.city.sunset ?? 12.1
                 
                 HeaderView(city: city)
@@ -37,6 +36,7 @@ struct ContentView: View {
         
                 
                 SunPositionView(sunrise: sunrise, sunset: sunset)
+                
                 Text("View Weekly Forcast")
                     .padding(.bottom)
                 Spacer()
@@ -46,8 +46,7 @@ struct ContentView: View {
             .background(Color("BG"))
             .task {
                 do {
-                    print(" - - - - - - - - - - -")
-                    self.forecast = try await getWeatherData(zip: 19107)
+                    self.forecast = try await getWeatherData()
                 } catch let error {
                     print("Failed to get data: \(error.localizedDescription)")
                 }

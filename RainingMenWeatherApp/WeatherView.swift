@@ -69,7 +69,7 @@ struct mainWeatherPNG: View {
                 .scaledToFit()
             //Rain
         case 500..<600:
-            Image("Storm")
+            Image("Rain")
                 .resizable()
                 .scaledToFit()
             //Snow
@@ -89,7 +89,7 @@ struct mainWeatherPNG: View {
                 .scaledToFit()
             //Cloud
         case 801..<900:
-            Image("Snow")
+            Image("Overcast")
                 .resizable()
                 .scaledToFit()
         default:

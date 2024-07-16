@@ -10,26 +10,26 @@ import SwiftUI
 struct SunPositionView: View {
     var sunrise: Double
     var sunset: Double
-    var currentTime: String {
-        Date().formatted(date: .omitted, time: .shortened)
+    var currentTime: Double {
+        NSDate().timeIntervalSince1970
      }
         
     let width = 300.0
     
     var body: some View {
-        let timeofsun = getSunPosPercent(sunrise: sunrise, sunset: sunset, curTime: currentTime)
-        
+        let sunpos = getSunPosPercent(sunrise: unixTo24hrTime(originalTime: sunrise), sunset: unixTo24hrTime(originalTime: sunset), curTime: currentTime)
+    
         VStack {
-            SunCurve(percent: timeofsun, label: currentTime)
+            SunCurve(percent: sunpos)
                 .frame(height: 60)
             
             HStack {
                 VStack {
-                    Text("Sunrise\n"+getTimeFromUNIXtime(time: sunrise))
+                    Text("Sunrise\n"+unixto12hrTime(time: sunrise))
                 }.padding(20)
                 Spacer()
                 VStack {
-                    Text("Sunset\n"+getTimeFromUNIXtime(time: sunset))
+                    Text("Sunset\n"+unixto12hrTime(time: sunset))
                         .multilineTextAlignment(.trailing)
                 }.padding(20)
             }
@@ -37,57 +37,29 @@ struct SunPositionView: View {
     }
 }
 
-func getHour24hrFormat(originalTime: Double) -> Double {
-    let hourTime = getTimeFromUNIXtime(time: originalTime)
-    let truncate = hourTime.firstIndex(of: ":")!
-    let postTime = hourTime.index(before: truncate)
-    
-    let hour = hourTime[...postTime]
-    print("hour")
-    print(hour)
-    
-    let int = NumberFormatter().number(from: String(hour))?.doubleValue
-    
-    if(hourTime.contains("AM")) {
-        if(int == 12) {
-            return 0
-        } else {
-            return int ?? 12
-        }
-    }
-    if(hourTime.contains("PM")) {
-        if(int == 12) {
-            return 12
-        } else {
-            return ((int ?? 1)+12)
-        }
-    }
-    
-    return int ?? 12
-}
 
-func getSunPosPercent(sunrise: Double, sunset: Double, curTime: String) -> Double {
-    //get just the hour of the sunrise / sunset to compare
-    let sunriseHour = getHour24hrFormat(originalTime: sunrise)
-    let sunsetHour = getHour24hrFormat(originalTime: sunset)
-    let now = getHour24hrFormat(originalTime: Double(curTime) ?? 1)
-    
+func getSunPosPercent(sunrise: Double, sunset: Double, curTime: Double) -> Double {
+    let now = unixTo24hrTime(originalTime: curTime)
+//    print("sunrise: \(sunrise)")
+//    print("sunset: \(sunset)")
+//    print("now: \(now)")
+
     //if we are pre-sunrise, put the sun in the left corner
-    if (now < sunriseHour) {
+    if (now < sunrise) {
         return 0
     }
     //if we are post-sunset, put the sun in the right corner
-    if (now > sunsetHour) {
+    if (now >= sunset) {
         return 1
     }
     
-    
-    //get the absolute value of the sunset - sunrise
-    let absolute = abs(sunsetHour - sunriseHour)
+    let absolute = abs(sunset - now)
     
     //Percentage difference formula
     //"technically" should be *100 but I want decimal format
-    return (absolute / ((sunsetHour + sunriseHour) / 2 ))
+    let percent = absolute / ((sunset + now) / 2 )
+
+    return 1-percent
 }
 
 infix operator *: MultiplicationPrecedence
@@ -132,7 +104,6 @@ struct SunCurveShape: Shape {
 
 struct SunCurve: View {
     var percent: Double
-    var label: String
     
     var body: some View {
         GeometryReader { proxy in
@@ -151,21 +122,11 @@ struct SunCurve: View {
                 .frame(width: 21, height: 32)
                 .position(bezier.position(t: percent))
                 .onAppear {
-                    print(p0, p1, p2, p3)
-                    print(bezier.position(t: 0.0), bezier.position(t: 0.5), bezier.position(t: 1.0))
                 }
         }
     }
 }
 
-func getTimeFromUNIXtime(time: Double) -> String {
-    let formatter = DateFormatter()
-    let formattedTime = NSDate(timeIntervalSince1970: time)
-    formatter.dateStyle = .none
-    formatter.timeStyle = .short
-    
-    return formatter.string(from: formattedTime as Date)
-}
 
 
 var gradient: LinearGradient {
